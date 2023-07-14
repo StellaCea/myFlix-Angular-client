@@ -3,15 +3,6 @@
     <p>Username: {{user.Username}}</p>
     <p>Email: {{user.email}}</p>
 
-    <h2>Favorite Movies</h2>
-    <mat-list>
-        <mat-list-item *ngFor="let movie of favoriteMovies">
-            <img matListItemAvatar src="{{movie.ImageURL}}" />
-            <div matListItemTitle>{{movie.Title}}</div>
-            <div matListItemLine>{{movie.Director.Name}}</div>
-        </mat-list-item>
-    </mat-list>
-
     <h2>Update Profile</h2>
     <form>
         <mat-form-field>
