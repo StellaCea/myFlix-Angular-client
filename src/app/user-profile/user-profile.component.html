@@ -8,11 +8,11 @@
 
 
     <h2>Your favorite movies:</h2>
-    <div *ngIf="favoriteMovies.length === 0">
+    <div *ngIf="favoriteMovies.length === 0;">
         <p>No favorite movies added yet</p>
     </div>
     <mat-list>
-        <mat-list-item *ngFor="let movie of favoriteMovies">
+        <mat-list-item *ngFor="let movie of favoriteMovies;">
             <img matListItemAvatar src="{{movie.ImagePath}}" />
             <span matListItemTitle>{{movie.Title}}</span>
         </mat-list-item>
