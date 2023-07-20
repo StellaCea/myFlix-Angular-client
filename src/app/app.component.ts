@@ -7,6 +7,9 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
   styleUrls: ['./app.component.scss']
 })
 
+/**
+ * default entry point to the myFlix application
+ */
 export class AppComponent {
   title = 'myFlix-Angular-client';
 }

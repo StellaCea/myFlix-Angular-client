@@ -18,8 +18,12 @@ export class UserLoginFormComponent implements OnInit {
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
     public snackBar: MatSnackBar,
     public router: Router ) { }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+  /**
+   * on login token, userdata and Username will be stored in localstorage
+   * user will be redirected to the mvoie page
+   */
 
   logInUser(): void {
     this.fethApiData.userLogin(this.userData).subscribe((response) => {

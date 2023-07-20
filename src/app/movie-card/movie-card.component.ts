@@ -5,7 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MovieInfoComponent } from '../movie-info/movie-info.component';
 
 
-
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
@@ -16,7 +15,7 @@ export class MovieCardComponent {
   constructor(public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
     public dialog: MatDialog) { }
-
+// when the page loads getMovies() fetches all the movies and stores them in the movie array
   ngOnInit(): void {
     this.getMovies();
   }
@@ -30,6 +29,12 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * Opens the Genre dialog
+   * @param name 
+   * @param description 
+   */
+
   openGenre(name: string, description: string): void{
     this.dialog.open(MovieInfoComponent, {
       data: {
@@ -38,6 +43,12 @@ export class MovieCardComponent {
       },
     });
   }
+
+  /**
+   * Opens the Director doalog
+   * @param name 
+   * @param bio 
+   */
 
   openDirector(name: string, bio: string): void{
     this.dialog.open(MovieInfoComponent, {
@@ -48,6 +59,11 @@ export class MovieCardComponent {
     });
   }
 
+/**
+ * Opens the Synopsis dialog about the movie
+ * @param description 
+ */
+
   openSynopsis(description: string): void {
     this.dialog.open(MovieInfoComponent, {
       data: {
@@ -56,6 +72,11 @@ export class MovieCardComponent {
       },
     });
   }
+
+/**
+ * Movies will be added/deleted from the user's array of favorite movies
+ * @param {string} id 
+ */
 
   addFavorite(id: string): void {
     this.fetchApiData.addFavoriteMovie(id).subscribe((Reasponse: any) => {

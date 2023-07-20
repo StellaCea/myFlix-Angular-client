@@ -17,10 +17,11 @@ export class UserRegistrationFormComponent implements OnInit {
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
     public snackBar: MatSnackBar) { }
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void {}
 
-  //Function responsible for sending the form inputs to the backend
+  /**
+   * Sends the form inputs to the backend
+   */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((response) => {
       //Logic for a successful user registration (to be implemented)

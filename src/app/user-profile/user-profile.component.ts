@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss']
 })
+
 export class UserProfileComponent implements OnInit {
   user: any = {};
   favoriteMovies: any[] = [];
@@ -24,7 +25,11 @@ export class UserProfileComponent implements OnInit {
   ngOnInit(): void {
     this.getUser();
   }
-//Get info about the user and favorite movies from the API
+
+  /**
+   * getUser gets all the data displayed about the user
+   * getAllMovies will filter the movies id that are added to the favorite movies array
+   */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((response: any) => {
       this.user = response;
@@ -37,10 +42,14 @@ export class UserProfileComponent implements OnInit {
       })
     })
   }
-  //Update user data
+
+  /**
+   * accepts the inputed user data and sends it to the database and sets the localstorage
+   */
   updateUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe((result) => {
       localStorage.setItem('user', JSON.stringify(result));
+      localStorage.setItem("Username", result.Username);
 
       this.snackBar.open('User successfully updated', 'OK', {
         duration: 2000
@@ -52,7 +61,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
-  //delete the user
+  /**
+   * calls the API to delet user's profile
+   */
   deleteUser(): void {
     this.fetchApiData.deleteUser().subscribe((result) => {
       localStorage.clear();
