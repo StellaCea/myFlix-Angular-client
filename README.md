@@ -28,7 +28,7 @@ Start the project: ```ng serve```
 Navigate to ```http://localhost:4200/```. The app will automatically reload if you change any of the source files.
 
 ## Live App
-Check out the live version [here] (https://stellacea.github.io/myFlix-Angular-client/)
+Check out the live version [here](https://stellacea.github.io/myFlix-Angular-client/).
 
 
 
