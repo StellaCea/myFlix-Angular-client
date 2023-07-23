@@ -2,6 +2,8 @@
 
 The MyFlix movie App in Angular is designed to be responsive and caters the movie enthusiasts. It is an analogue to previously built MyFlix App built using React. The app provides users with movie information. Additionally, registered users can access features like viewing, updating and deleting their accounts. It is the client-side to the RESTful Movie API.
 
+![Angular View](https://github.com/StellaCea/myFlix-Angular-client/assets/80626240/c34d2a5c-7e73-4c05-bb9d-68c81410eb24)
+
 ## Technologies used ##
 - JavaScript
 - TypeScript
@@ -22,10 +24,11 @@ The MyFlix movie App in Angular is designed to be responsive and caters the movi
 - Update user's data
 
 ## Installation ##
-Clone the repository: ```git clone https://github.com/yourusername/flixit-angular.git ```
-Install the dependencies: ```npm install```
-Start the project: ```ng serve```
-Navigate to ```http://localhost:4200/```. The app will automatically reload if you change any of the source files.
+- Clone the repository: ```git clone https://github.com/yourusername/flixit-angular.git ```
+- Install the dependencies: ```npm install```
+- Start the project: ```ng serve```
+- Navigate to ```http://localhost:4200/```.
+- The app will automatically reload if you change any of the source files.
 
 ## Live App
 Check out the live version [here](https://stellacea.github.io/myFlix-Angular-client/).
